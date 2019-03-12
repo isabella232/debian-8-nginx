@@ -11,7 +11,8 @@ Please consult https://wiki.debian.org/LTS for information regarding debian 8 li
 Please note this image is explictly intended to be run as a non-privileged user. Ensure you specify a user id (UID) other than zero when you run it. Running as root will not function.
 
 
-```bash
+```
+bash
 UID=999
 PORT=80
 WEB_ROOT="/var/www/"
@@ -30,4 +31,4 @@ Please see the top of the Makefile for various variables which you may choose to
 
 ## Modifying the tests
 
-All tests are run using the tespack-framework image. See 1and1internet/testpack-framework for more information.
+All tests are run using the testpack-framework image. See 1and1internet/testpack-framework for more information.
