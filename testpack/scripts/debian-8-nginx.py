@@ -88,8 +88,8 @@ class Test1and1ApacheImage(Test1and1Common):
         self.file_mode_test("/var/run/nginx.pid", "-") # This is enough to check that it exists and is a file
 
     def test_nginx_get(self):
-        driver = webdriver.PhantomJS()
-        driver.get("http://%s:8080/test.html" % Test1and1Common.container_ip)
+        driver = self.getChromeDriver()
+        driver.get("%s/test.html" % Test1and1Common.endpoint)
         self.assertEqual('Success', driver.title)
 
     '''def test_nginx_cgi_headers(self):
